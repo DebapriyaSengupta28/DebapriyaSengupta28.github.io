@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./Assets/Icon/DG1090.png" type="image/png" sizes="64x64">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/responsive.css" />
+  </head>
+  <body>
+    <div class="opening-sequence" id="openingSequence">
+      <img src="./Assets/Icon/DG.png" alt="Logo" id="logo" class="hidden" />
+    </div>
+
+    <video autoplay muted loop id="video-background" class="hidden">
+      <source src="./Assets/background/nightcity.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <div class="content hidden" id="mainContent">
+      <nav class="menu">
+        <h1>WELCOME</h1>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Tools</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+      
+      <div class="info-box hidden" id="infoBox">
+        <p>
+          Hey there!
+        </p>
+        <p>
+          I'm Debapriya, a dedicated web developer driven by the passion for crafting immersive and visually captivating online experiences. With a solid foundation in HTML, CSS, and JavaScript, complemented by expertise in frameworks like React, I thrive on turning creative concepts into polished, user-friendly websites.
+        </p>
+        <p>
+          I also have a deep love for video gaming and movies. When I'm not busy building websites or exploring new web technologies, you'll likely find me getting lost in an immersive video game world or analyzing the latest cinematic masterpiece.
+        </p>
+      </div>
+    
+
+    <!-- Added Skills Content -->
+    <div class="skillContainer hidden">
+      <div class="skillBox">
+        <div class="row header-row">
+          <h2 class="heading">I WORK WITH</h2>
+        </div>
+        <div class="row">
+          <div class="tool">
+            <img src="./Assets/Skill Tree/html5-logo.png" alt="Logo 1" />
+            <span class="tool-name">HTML</span>
+          </div>
+          <div class="tool">
+            <img src="./Assets/Skill Tree/css-logo.png" alt="Logo 2" />
+            <span class="tool-name">CSS</span>
+          </div>
+          <div class="tool">
+            <img src="./Assets/Skill Tree/JavaScript-logo.png" alt="Logo 3" />
+            <span class="tool-name">JavaScript</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="tool">
+            <img src="./Assets/Skill Tree/node-logo.png" alt="Logo 4" />
+            <span class="tool-name">Node.js</span>
+          </div>
+          <div class="tool">
+            <img src="./Assets/Skill Tree/react-logo.png" alt="Logo 5" />
+            <span class="tool-name">React.js</span>
+          </div>
+          <div class="tool">
+            <img src="./Assets/Skill Tree/mongodb-logo.png" alt="Logo 6" />
+            <span class="tool-name">mongoDB</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="tool">
+            <img src="./Assets/Skill Tree/python-logo.png" alt="Logo 7" />
+            <span class="tool-name">Python</span>
+          </div>
+          <div class="tool">
+            <img src="./Assets/Skill Tree/c-logo.png" alt="Logo 8" />
+            <span class="tool-name">C</span>
+          </div>
+          <div class="tool">
+            <img src="./Assets/Skill Tree/mysql-logo.png" alt="Logo 9" />
+            <span class="tool-name">mySQL</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End of Skills Content -->
+
+    <div id="projectPortfolio" class="hidden">
+      <div class="projectContainer">
+        <div class="project-arrows">
+          <button class="btn" id="left-btn">&lt;</button>
+          <div class="project-scroll-container">
+            <div class="project-container" id="projects"></div>
+          </div>
+          <button class="btn" id="right-btn">&gt;</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="contactContent" class="hidden">
+      <div class="social-box">
+        <!-- Left side box -->
+        <div style="margin-right: 20px">
+          <div class="user-image">
+            <img src="./Assets/Socials/user-circle.jpeg" alt="User Image" />
+          </div>
+          <div class="gmail">
+            <img src="./Assets/Socials/gmail-logo.png" alt="Gmail Logo" />
+            <span>debapriyasengupta21@gmail.com</span>
+          </div>
+          <!-- Gmail link -->
+        </div>
+        <!-- Right side box -->
+        <div class="social-links">
+          <!-- Social links -->
+          <div class="social-link">
+            <a href="https://github.com/DebapriyaSengupta28" target='_blank'>
+              <img src="./Assets/Socials/github-logo.png" alt="GitHub" />
+            </a>
+          </div>
+          <div class="social-link">
+            <a href="https://www.linkedin.com/in/debapriya-sengupta-0b9aa3229/" target='_blank'>
+              <img src="./Assets/Socials/linkedin-logo.png" alt="LinkedIn" />
+            </a>
+          </div>
+          <div class="social-link">
+            <a href="https://codepen.io/DeceasedGoat" target='_blank'>
+              <img src="./Assets/Socials/codepen-logo.png" alt="CodePen" />
+            </a>
+          </div>
+          <div class="social-link">
+            <a href="https://www.instagram.com/deceased_goat?igsh=MXc4MjNxcWw3M2lqMQ==" target='_blank'>
+              <img src="./Assets/Socials/instagram-logo.png" alt="Instagram" />
+            </a>
+          </div>
+          <!-- Add more social links if needed -->
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="projectContainer.js"></script>
+  </body>
+</html>

@@ -1,0 +1,318 @@
+/* Responsive styling for smaller devices */
+@media only screen and (max-width: 786px) {
+  #logo {
+    width: 100%; /* Adjust the width of the image */
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+    /* Adjusting menu position */
+    .menu {
+      top: 5%;
+      left: 5%;
+      transform: none;
+    }
+  
+    /* Making menu items stack vertically */
+    .menu ul {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    /* Adjusting menu title font size */
+    .menu h1 {
+      font-size: 5vmin;
+    }
+  
+    /* Adjusting menu item font size */
+    .menu a {
+      font-size: 4vmin;
+    }
+  
+    /* Info Box */
+    .info-box {
+      left: 3%;
+      font-size: 3vmin;
+      margin: 20px 0 0;
+      transform: translateY(-50%);
+      top: calc(100% + 20px);
+      font-size: 20px;
+      width: 500px;
+      max-width: 80%;
+      height: 400px; 
+      margin-left: 0;
+      top: 30%;
+      left: 35%;
+    }
+  
+    /* Skill Container */
+    .skillContainer {
+      left: 3%;
+      font-size: 3vmin;
+      margin: 20px 0 0;
+      transform: translateY(-50%);
+      top: calc(100% + 20px);
+      font-size: 20px;
+      width: 500px;
+      max-width: 80%;
+      height: 400px;
+      margin-left: 0;
+      top: 30%;
+      left: 35%;
+    }
+  
+    /* Project Container */
+    .projectContainer {
+      left: 3%;
+      font-size: 3vmin;
+      margin: 20px 0 0;
+      transform: translateY(-50%);
+      top: calc(100% + 20px);
+      font-size: 20px;
+      width: 500px;
+      max-width: 80%;
+      height: 400px;
+      margin-left: 0;
+      top: 30%;
+      left: 35%;
+    }
+  
+    /* Contact */
+    .social-box {
+      left: 3%;
+      font-size: 3vmin;
+      margin: 20px 0 0;
+      transform: translateY(-50%);
+      top: calc(100% + 20px);
+      font-size: 20px;
+      width: 400px;
+      max-width: 70%;
+      height: 300px;
+      margin-left: 0;
+      top: 30%;
+      left: 35%;
+    }
+  }
+
+  @media screen and (max-width: 1110px) {
+    
+    .social-box {
+        left: 3%;
+        font-size: 3vmin;
+        margin: 20px 0 0;
+        transform: translateY(-50%);
+        top: calc(100% + 20px);
+        font-size: 20px;
+        width: 300px;
+        max-width: 70%;
+        height: 200px;
+        margin-left: 0;
+        top: 30%;
+        left: 30%;
+    }
+    .user-image {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 30px;
+        margin-bottom: 20px;
+      }
+    .social-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 20px;
+      }
+    .social-link {
+        width: calc(50% - 10px);
+        margin-bottom: 30px;
+      }
+      .social-link img {
+        width: 70%;
+        height: 30px;
+        width: 30px;;
+      }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .info-box {
+      width: 400px;
+      max-width: 80%;
+      height: 300px;
+      max-height: 60%;
+      margin-left: 0;
+      margin-top: 120px;
+      font-size: 15px;
+      top: 55%;
+      left: 10%;
+      font-size: larger;
+    }
+  
+    /* Skill Container */
+    .skillContainer {
+        width: 400px;
+        max-width: 80%;
+        height: 300px;
+        max-height: 60%;
+        margin-left: 10px;
+        margin-top: 120px;
+        font-size: 15px;
+        top: 55%;
+        left: 10%;
+        font-size: larger;
+    }
+  
+    /* Project Container */
+    .projectContainer {
+        margin-left: 5px;
+        top: 65%;
+        left: 8%;
+      }
+
+      .project {
+        width: 100%;
+        max-width: none;
+        height: auto;
+      }
+
+      .project .btn-more {
+        bottom: 5px;
+        right: 5px;
+      }
+  
+    /* Contact */
+    .social-box {
+        margin-left: 10px;
+        top: 65%;
+        left: 8%;
+    }
+  }
+
+  
+  @media screen and (max-width: 480px) {
+    .info-box {
+      width: 70%;
+      height: 250px;
+      max-height: 60%;
+      margin-left: 0;
+      margin-top: 30px;
+      font-size: 12px;
+      top: 50%;
+      left: 5%;
+    }
+    .skillContainer {
+      width: 400px;
+      max-width: 70%;
+      height: 300px;
+      max-height: 60%;
+      margin-left: 20px;
+      margin-top: 50px;
+      font-size: 15px;
+      top: 55%;
+      left: 10%;
+      font-size: larger;
+  }
+    .projectContainer {
+      max-width: 90%;
+      margin: 10px auto;
+      text-align: center;
+      margin-right: 20px;
+      top: 50%;
+      left: 2%;
+    }
+  
+    .project-arrows {
+      margin-top: 20px;
+    }
+  
+    .project-scroll-container {
+      overflow-x: scroll;
+      width: 100%;
+      margin: 10px auto;
+      padding-bottom: 20px;
+      text-align: left;
+    }
+  
+    .projectContainer {
+      max-width: 90%;
+      margin: 10px;
+      text-align: center;
+    }
+  
+    .project {
+      position: relative;
+      width: 80%;
+      max-width: 150px;
+      height: auto;
+      display: inline-block;
+      margin: 0 5px;
+      text-align: left;
+    }
+  
+    .project img {
+      max-height: 100%;
+      border-radius: 5px;
+    }
+  
+    .project .details {
+      max-height: 50%;
+      margin-bottom: 40px;
+    }
+  
+    .project .btn-more {
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+      margin-top: 15px;
+      width: 20%;
+      height: auto;
+      text-align: center;
+    }
+  
+    #left-btn, #right-btn {
+      display: block;
+      float: left;
+    }
+  
+    #right-btn {
+      float: right;
+    }
+
+    .social-box {
+      position: fixed;
+      top: 50%;
+      left: 45%;
+      transform: translate(-50%, -50%);
+      font-size: 20px;
+      width: 90%;
+      max-width: 300px;
+      height: auto;
+      padding: 10px;
+      border-radius: 10px;
+      margin: 0 10px;
+    }
+    .user-image {
+      width: 80px; 
+      height: 80px; 
+      margin-right: 20px;
+      margin-bottom: 10px;
+    }
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+    .social-link {
+      width: calc(50% - 10px);
+      margin-bottom: 20px;
+    }
+    .social-link img {
+      width: 60%; 
+      height: 25px; 
+    }
+  }
+  
+  

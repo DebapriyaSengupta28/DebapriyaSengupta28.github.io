@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    color: #ffffff;
+
+}
+
+.hidden {
+    display: none;
+}
+
+.opening-sequence {
+    animation: fadeIn 3s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  filter: brightness(0.7) contrast(1) sepia(0.2); /* Adjust brightness and contrast for the shader effect */
+}
+
+.menu {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: min-content;
+}
+
+.menu ul {
+    list-style-type: none;
+}
+
+.menu h1 {
+    font-family: 'League Gothic', Helvetica, serif;
+    font-size: 6vmin;
+    width: fit-content;
+    white-space: nowrap;
+    margin-left: 4px;
+}
+
+.menu a {
+    display: block;
+    font-family: 'League Gothic', Helvetica, serif;
+    font-size: 5vmin;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--menu);
+    padding: 0.5rem 0;
+    transform: scale(0.95);
+    opacity: 0.25;
+    transition: scale 550ms linear, opacity 250ms linear;
+}
+
+.menu a:first-of-type {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.menu:hover a:not(:hover) {
+    transform: scale(0.95);
+    opacity: 0.25;
+}
+
+.menu a:hover {
+    transform: scale(1);
+    opacity: 1;
+}
+
+
+.info-box {
+  background-color: transparent;
+  padding: 2rem;
+  border: 2px solid white;
+  border-radius: 0.5rem;
+  transition: opacity 0.5s ease;
+  opacity: 0;
+  width: 600px; /* Adjust width as needed */
+  height: 400px; /* Adjust height as needed */
+  max-height: 100%; /* Ensure box doesn't exceed viewport height */
+  overflow-y: auto; /* Enable vertical scrolling if content overflows */
+  position: absolute;
+  top: 50%;
+  left: 50%; /* Center the info box horizontally */
+  transform: translate(-50%, -50%); /* Center the info box vertically and horizontally */
+  margin-left: 100px; /* Add margin to create larger gap */
+  font-family: 'League Gothic', Helvetica, serif; /* Apply similar font */
+  color: var(--menu); /* Apply similar text color */
+  font-size: 25px; /* Increase font size */
+}
+
+.info-box.show {
+    opacity: 1;
+}
+
+/* skills */
+
+.skillContainer {
+  width: 80%; /* Adjusted width to 80% of the viewport width */
+  max-width: 800px; /* Set maximum width */
+  height: 400px; /* Adjust height as needed */
+  position: absolute;
+  top: 50%;
+  left: 50%; /* Adjusted left position */
+  transform: translate(-50%, -50%);
+  margin-left: 100px; /* Adjusted margin to create space */
+  font-family: 'League Gothic', Helvetica, serif; /* Apply similar font */
+  color: var(--menu); /* Apply similar text color */
+  font-size: 25px; /* Increase font size */
+  flex-direction: column; /* Change flex-direction to column */
+  align-items: center;
+  justify-content: center; /* Add justify-content: center; */
+}
+
+.skillContainer.show {
+  display: flex; /* Ensure it's displayed when the show class is added */
+}
+
+.skillBox {
+  border: 2px solid white; /* White border */
+  border-radius: 0.5rem;
+  background-color: transparent; /* Transparent background */
+  width: 100%; /* Adjusted width */
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+
+.header-row {
+  justify-content: center;
+}
+
+.heading {
+  margin: 0;
+}
+
+.tool {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tool img {
+  margin-bottom: 10px;
+  width: 40px;
+  height: 40px;
+}
+
+.tool-name, .tool img[alt] {
+  color: white; /* Set text color to white */
+}
+
+
+/* projects */
+
+.projectContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  margin-left: 100px; /* Add margin to create larger gap */
+  position: absolute; /* Position the project content absolutely */
+  top: 50%; /* Align the project content vertically */
+  left: 50%; /* Align the project content horizontally */
+  transform: translate(-50%, -50%); /* Center the project content */
+  font-family: 'League Gothic', Helvetica, serif;
+}
+
+.project-arrows {
+  display: flex;
+  align-items: center;
+  margin: 0 20px; 
+}
+
+.project-scroll-container {
+  overflow-x: auto;
+  display: flex;
+}
+
+.project-container {
+  display: flex;
+  max-width: 500px; /* Limit width to match the project container */
+  overflow: hidden; /* Hide overflowing content */
+}
+
+.project {
+  font-size: 16px;
+  padding: 20px;
+  transition: transform 0.3s ease;
+  border: 2px solid white; 
+  border-radius: 5px;
+  margin: 0 10px;
+  width: 400px; /* Increase width to 400px */
+  height: 300px; /* Increase height to 300px */
+  position: relative;
+  background-color: transparent; 
+}
+
+.project img {
+  width: 100%; /* Ensure image takes full width of the container */
+  max-height: calc(50% - 15px); /* Limit image height to 50% of the container height */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 5px 5px 0 0;
+}
+
+.project .details {
+  max-height: calc(40% - 15px); /* Set a maximum height for the description */
+  overflow: hidden; /* Hide overflowing description */
+  padding: 10px;
+  margin-bottom: 10px; /* Reduced margin for better spacing */
+  font-size: larger;
+}
+
+.project h3 {
+  margin-top: 0;
+}
+
+.project p {
+  margin-bottom: 5px;
+}
+
+.project .btn-more {
+  display: flex; /* Make button a flex container */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  margin-top: 10px;
+  padding: 8px 15px;
+  background-color: transparent; 
+  color: white; 
+  text-decoration: none;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  position: absolute;
+  bottom: 15px; /* Position relative to the bottom */
+  right: 15px; /* Position relative to the right */
+  height: calc(8% - 16px); /* Set height of button */
+  width: auto; /* Allow button width to adjust based on content */
+}
+
+.project .btn-more:hover {
+  background-color: white; 
+  color: black; 
+}
+
+.btn {
+  font-size: 20px;
+  cursor: pointer;
+  transition: font-size 0.3s ease, color 0.3s ease; 
+  background-color: transparent; 
+  border: none; 
+  color: white; 
+}
+
+#left-btn:hover,
+#right-btn:hover {
+  color: white; 
+  opacity: 0.7; 
+}
+
+#left-btn {
+  margin-right: 10px; 
+}
+
+#right-btn {
+  margin-left: 10px; 
+}
+
+
+/* contact */
+
+.social-box {
+  display: flex;
+  align-items: flex-start;
+  background-color: transparent; /* Make the box transparent */
+  border: 2px solid white; /* Add white border */
+  border-radius: 5px;
+  padding: 60px; /* Increase the padding */
+  border-radius: 20px; /* Increase the border-radius */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 1000px; /* Increase the box width */
+  margin-left: 100px; /* Add margin to create larger gap */
+  position: absolute; /* Position the project content absolutely */
+  top: 50%; /* Align the project content vertically */
+  left: 50%; /* Align the project content horizontally */
+  transform: translate(-50%, -50%); /* Center the project content */
+  font-family: 'League Gothic', Helvetica, serif;
+}
+
+.user-image {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 30px;
+  margin-bottom: 20px;
+}
+
+.user-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.gmail {
+  text-align: center;
+  margin-bottom: 20px; /* Adjust the margin */
+  display: flex;
+  align-items: center; /* Align Gmail logo and text vertically */
+}
+
+.gmail span {
+  font-size: 18px; /* Decrease the font size */
+}
+
+.gmail img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Evenly space the social links */
+  margin-top: 30px; /* Add margin at the top */
+}
+
+.social-link {
+  width: calc(50% - 10px); /* Set width to occupy half of the available space with gap */
+  margin-bottom: 40px; /* Adjust the margin */
+  transition: transform 0.2s ease-in-out; /* Add transition effect */
+}
+
+.social-link:hover {
+  transform: scale(1.2); /* Scale the social link on hover */
+}
+
+.social-link img {
+  width: 100%; /* Occupy full width of the social link */
+  height: 50px;
+  width: 50px;;
+}
